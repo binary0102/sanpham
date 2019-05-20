@@ -1,0 +1,23 @@
+.slider-container {
+    display: flex;
+    flex-flow: column;
+    transform-origin: 0px 0px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform 0.25s ease 0s;
+    .single-image-slider {
+        position: relative;
+        flex: 1 1 0%;
+    
+        img {
+            height: 100px;
+            width: 80px;
+            transform: translate3d(0, 0, 0px)
+        }
+    }
+}
+.border-active-image {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(78, 89, 93, 0.3);
+    border-image: initial;
+}

@@ -1,0 +1,28 @@
+.section-header {
+    display: block;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 40px;
+}
+.bread-crumb {
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    font-size: 14px;
+    padding: 15px 0;
+    border-radius: 0;
+    li {
+        a {
+            color: #333;
+            text-decoration: none;
+            background: transparent;
+        }
+        display: inline;
+        strong {
+            color: #008744;
+            font-weight: 400;
+        }
+    }
+}

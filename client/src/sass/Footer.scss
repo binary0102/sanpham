@@ -1,0 +1,48 @@
+.footer-section {
+    display: block;
+    background-color: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+    margin-top: 6rem;
+    padding: 48px 0px 20px;
+}
+.list-circles {
+    display: block;
+    width: 28px;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-radius: 14px;
+    svg {
+        width: 16px;
+        height: 16px;
+        fill: rgb(255, 255, 255);
+    }
+}
+.upper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    padding-bottom: 24px;
+}
+.logo {
+    img {
+        height: 3.5rem;
+        width: 10rem;
+    }
+}
+.gov-link {
+    display: inline-block;
+    width: 88px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    img {
+        width: 100%;
+    }
+    span {
+        white-space: nowrap;
+    }
+}
