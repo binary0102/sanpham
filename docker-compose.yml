@@ -14,7 +14,7 @@ services:
       - mongo 
 
   chatserver:
-    container_name: server
+    container_name: chatserver
     restart: always
     build: ./server
     ports:
@@ -23,7 +23,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules 
   client:
-    container_name: server
+    container_name: client
     restart: always
     build: ./server
     ports:
@@ -32,7 +32,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
   admin:
-    container_name: server
+    container_name: admin
     restart: always
     build: ./server
     ports:
