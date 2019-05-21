@@ -1,7 +1,27 @@
 
 version: "3"
 services:
+  server:
+    container_name: server
+    restart: unless-stopped
+    build: ./server
+    ports:
+      - "3002:3002"
+    volumes:
+      - .:/home/node/app
+     
+    links:
+      - mongo 
 
+  chatserver:
+    container_name: chatserver
+    restart: unless-stopped
+    build: ./chatserver
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/home/node/app
+  
 
  
   client:
@@ -14,7 +34,15 @@ services:
        - .:/home/node/app
    
 
-
+    
+  admin:
+    container_name: admin
+    restart: unless-stopped
+    build: ./admin
+    ports:
+      - "81:3001"
+    volumes:
+      - .:/home/node/app
   
  
   mongo:
