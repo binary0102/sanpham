@@ -9,9 +9,10 @@ COPY package*.json ./
 USER node
 
 RUN npm install
-
+RUN npm install -g serve
 COPY --chown=node:node . .
 
 EXPOSE 3001
 
-CMD [ "npm", "start"]
+#CMD [ "npm", "start"]
+CMD [ "serve","-l" ,"3001" "-s","build"]
