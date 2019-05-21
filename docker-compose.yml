@@ -30,7 +30,7 @@ services:
     build: ./client
   
     volumes:
-       - client:/home/node/app/
+       - ./client:/home/node/app/
     command: ls
        
     ports:
