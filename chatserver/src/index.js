@@ -4,7 +4,7 @@ import {makeHandlers} from './handle';
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 
-mongoose.connect(" mongodb://0.0.0.0:27017/shop", { useCreateIndex: true, useNewUrlParser: true },function (err) {
+mongoose.connect(" mongodb://mongo:27017/shop", { useCreateIndex: true, useNewUrlParser: true },function (err) {
   if (err) throw err;
 });
 

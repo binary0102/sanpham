@@ -23,6 +23,8 @@ services:
     volumes:
       - ./chatserver:/home/node/app
       - /home/node/app/node_modules
+    links:
+      - mongo 
     depends_on: 
       - mongo
  
