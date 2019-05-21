@@ -31,7 +31,7 @@ services:
   
     volumes:
        - ./client:/home/node/app/
-    command: npm start
+  
        
     ports:
       - "80:3000"
