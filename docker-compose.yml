@@ -35,7 +35,7 @@ services:
        
     ports:
       - "80:3000"
-    commands: ls -la
+    command: ls -la
 
     
   admin:
