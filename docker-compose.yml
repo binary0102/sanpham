@@ -22,7 +22,8 @@ services:
     volumes:
       - .:/home/node/app
   
-
+    depends_on: 
+      - mongo
  
   client:
     container_name: client
@@ -46,7 +47,8 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-  
+    depends_on: 
+      - mongo
  
   mongo:
     container_name: mongo
