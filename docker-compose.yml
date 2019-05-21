@@ -31,7 +31,7 @@ services:
   
     volumes:
        - ./client:/home/node/app/
-    command: ls
+    command: ls -la
        
     ports:
       - "80:3000"
