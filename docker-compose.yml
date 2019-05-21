@@ -47,6 +47,7 @@ services:
     build: ./admin
     ports:
       - "81:3001"
+      - "82:9000"
     volumes:
       - ./admin:/home/node/app/
       - /home/node/app/node_modules
