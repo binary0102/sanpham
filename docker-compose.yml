@@ -44,7 +44,8 @@ services:
     ports:
       - "81:3001"
     volumes:
-      - .:/home/node/app
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
   
  
   mongo:
