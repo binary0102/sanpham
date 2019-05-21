@@ -8,8 +8,8 @@ services:
     ports:
       - "3002:3002"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./admin:/home/node/app
+      - admin/node_modules:/home/node/app/node_modules
     links:
       - mongo 
 
@@ -20,8 +20,8 @@ services:
     ports:
       - "4000:4000"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./chatserver:/home/node/app
+      -  chatserver/node_modules:/home/node/app/node_modules
 
  
   client:
@@ -31,8 +31,8 @@ services:
     ports:
       - "80:3000"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+       - ./client:/home/node/app
+       -  client/node_modules:/home/node/app/node_modules
     
   admin:
     container_name: admin
@@ -41,8 +41,8 @@ services:
     ports:
       - "81:3001"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./admin:/home/node/app
+      -  admin/node_modules:/home/node/app/node_modules
  
   mongo:
     container_name: mongo
