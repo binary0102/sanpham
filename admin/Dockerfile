@@ -9,7 +9,7 @@ COPY package*.json ./
 USER root
 
 RUN npm install
-RUN npm install --save serve
+RUN npm install -g serve
 COPY --chown=root:root . .
 
 EXPOSE 3001
