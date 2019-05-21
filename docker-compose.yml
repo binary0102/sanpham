@@ -9,7 +9,7 @@ services:
       - "3002:3002"
     volumes:
       - .:/home/node/app
-     
+    
     links:
       - mongo 
 
@@ -32,7 +32,6 @@ services:
     volumes:
        - ./client:/home/node/app/
        - /home/node/app/node_modules
-    command: ls -la
     ports:
       - "80:3000"
   
