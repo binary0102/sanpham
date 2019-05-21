@@ -35,7 +35,7 @@ services:
        
     ports:
       - "80:3000"
-   
+    commands: ls -la
 
     
   admin:
@@ -54,3 +54,5 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+volumes:
+    client:
