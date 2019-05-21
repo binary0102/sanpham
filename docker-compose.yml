@@ -8,11 +8,12 @@ services:
     ports:
       - "3002:3002"
     volumes:
-      - .:/home/node/app
-    
+      - ./server:/home/node/app
+      - /home/node/app/node_modules
     links:
       - mongo 
-
+    depends_on: 
+      - mongo
   chatserver:
     container_name: chatserver
     restart: unless-stopped
@@ -20,8 +21,8 @@ services:
     ports:
       - "4000:4000"
     volumes:
-      - .:/home/node/app
-  
+      - ./chatserver:/home/node/app
+      - /home/node/app/node_modules
     depends_on: 
       - mongo
  
@@ -45,8 +46,8 @@ services:
     ports:
       - "81:3001"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./admin:/home/node/app/
+      - /home/node/app/node_modules
     depends_on: 
       - mongo
  
@@ -55,5 +56,3 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-volumes:
-    client:
