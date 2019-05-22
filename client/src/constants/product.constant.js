@@ -1,0 +1,5 @@
+export const ProductConstants = {
+    PRODUCT_REQUEST: "PRODUCT_REQUEST",
+    PRODUCT_FAILD: "PRODUCT_FAILD",
+    PRODUCT_SUCCESS: "PRODUCT_SUCCESS",
+}
