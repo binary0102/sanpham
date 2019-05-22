@@ -1,6 +1,5 @@
 
-const apiUrl = process.env.NODE_ENV === 'production' ? 'http://localhost:3002/api' : 'http://localhost:3002/api';
-
+const apiUrl = process.env.REACT_APP_API 
 
 export function login(email,password) {
     const requestOptions = {
