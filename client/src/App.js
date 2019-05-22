@@ -14,7 +14,8 @@ import ProductPage from './container/ProductPage';
 import PrivateRouter from './container/PrivateRouter';
 import storeRoot from './store';
 import AccountPage from './container/AccountPage';
-import history from './helper/history';
+
+import Profile from './component/Profile';
 import {Account} from './router/account';
 const store = storeRoot;
 
@@ -23,9 +24,9 @@ class App extends Component {
     return (
 
       <Provider store={store}>
-        <BrowserRouter history={history} >
-
-          <PageHeader />
+        <BrowserRouter >
+        <Route path="/" component={Profile} />
+        {/*   <PageHeader />
           
             <Switch>
             <Route exact path="/" component={HomePage} />
@@ -39,7 +40,7 @@ class App extends Component {
             <Route path="*" component={NotFound}  status={404}/>
             
             </Switch>
-          <Footer />
+          <Footer /> */}
         </BrowserRouter>
       </Provider>
     );
