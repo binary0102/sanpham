@@ -21,7 +21,7 @@ export  async  function handleTokenMiddleware(req, res, next) {
     try {
       
         if (req.signedCookies.token === undefined) {
-              res.cookie("token", AuthServices.createToken({_id:randomUserId}), {domain:"localhost",signed: true,  expires: new Date(Date.now() + 900000)})
+              res.cookie("token", AuthServices.createToken({_id:randomUserId}), {signed: true,  expires: new Date(Date.now() + 900000)})
               req.user = {_id: randomUserId};
         }else {
             let  token =  AuthServices.verifyToken(req.signedCookies.token);
