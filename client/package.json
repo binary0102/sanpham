@@ -27,7 +27,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-    "start": "env-cmd PORT=3001 react-scripts start",
+    "start": " PORT=3001 env-cmd react-scripts start",
     "build": "env-cmd .env.staging npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
