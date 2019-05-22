@@ -1,7 +1,0 @@
-export const filterConstant = { 
-    FILTER_PRODUCT : "FILTER_PRODUCT",
-    SHOW_ALL: "SHOW_ALL",
-    PRICE_LOW_TO_HIGHT : "LOW_PRICE",
-    PRICE_HIGHT_TO_LOW : "HIGH_PRICE",
-    DISCOUNT_HIGHT : "HIGHEST_DISCOUNT",
-}
