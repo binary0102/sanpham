@@ -12,7 +12,7 @@ RUN npm install
 RUN npm install -g serve
 COPY --chown=root:root . .
 
-EXPOSE 3001
+
 
 #RUN serve -l 3001 -s build
 CMD [ "npm", "start"]
